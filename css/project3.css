@@ -59,6 +59,7 @@ ul{
     width: fit-content;
     font-size: 20px;
     transition: 0.5s;
+    z-index: 2;
 }
 .main-header::before,
 .main-header::after
