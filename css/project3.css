@@ -427,3 +427,171 @@ header .container .content ul > li > a:hover::before{
     transform: rotate(5deg)  scale(1.1);
 }
 /* End Gallery */
+/* Start features */
+.features{
+    padding-top: var(--main-paddding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 40px;
+}
+.features .box{
+    text-align: center;
+    border: 1px solid #ccc;
+    
+}
+.features .box .img-holder{
+    position: relative;
+    overflow: hidden;
+}
+.features .box .img-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.features .box .img-holder::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 100px 388px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-transition);
+}
+.features .box .img-holder img {
+    max-width: 100%;
+}
+.features .box:hover .img-holder::after{
+    border-width: 0px 388px 100px 388px;
+}
+.features .box  h2{
+    position: relative;
+    margin: auto;
+    font-size: 40px;
+    width: fit-content;
+}
+.features .box h2::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+    height: 5px;
+    width: calc(100% - 30px);
+}
+.features .box p{
+    line-height: 2;
+    font-size: 20px;
+    margin: 30px 0;
+    padding: 30px;
+    font-weight: bold;
+    color: #555;
+}
+.features .box a{
+    display: block;
+    margin: 0 auto 30px;
+    text-decoration: none;
+    border: 3px solid transparent;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+.features .quality .img-holder::before{
+    background-color: rgb(244 64 54 /40%);
+}
+.features .quality h2:after{
+    background-color: #F44036;
+}
+.features .quality a{
+    color: #F44036;
+    border-color: #F44036;
+    background: linear-gradient(to right, #F44036 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .time .img-holder::before{
+    background-color: rgb(0 150 136 / 40%);
+}
+.features .time h2:after{
+    background-color: #009688;
+}
+.features .time a{
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .money .img-holder::before{
+    background-color: rgb(3 169 244 / 40%);
+}
+.features .money h2:after{
+    background-color: #03a9f4;
+}
+.features .money a{
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .box:hover a{
+    background-position: left top;
+    color: white;
+}
+/* End features */
+/* Start Testimonials */
+.testimonials{
+    padding-top: var(--main-paddding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+}
+.testimonials .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 50px ;
+    
+}
+.testimonials .container .box{
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
+    position: relative;
+}
+.testimonials .container .box img{
+    top: -63px;
+    position: absolute;
+    right: -23px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+}
+.testimonials .container .box h3{
+    margin: 0 0 10px;
+    color: var(--main-color);
+}
+.testimonials .container .box .title{
+    color: #777;
+    margin-bottom:12px;
+    display: block;
+}
+.testimonials .container .box .name .close{
+    color: #ffc107;
+}
+.testimonials .container .box P{
+    line-height: 1.5;
+    color: #333;
+}
+/* End Testimonials */
